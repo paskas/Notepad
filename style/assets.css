@@ -1,0 +1,124 @@
+/* tooltip */
+
+.tooltip {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    display: flex;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: lightgray;
+    color: black;
+    text-align: center;
+    border-radius: 8px;
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+/* button */
+
+.addBars button {
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: white;
+    padding: 8px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
+}
+
+.addBars button:hover {
+    transition: 130ms;
+    background-color: rgb(251, 188, 5);
+}
+
+.navButton {
+    cursor: pointer;
+    height: 48px;
+    width: 160px;
+    display: flex;
+    align-items: center;
+}
+
+.navButton:hover {
+    background-color: rgb(251, 188, 5);
+    border-radius: 0px 16px 16px 0px;
+}
+
+.bmButton {
+    cursor: pointer;
+    height: 48px;
+    display: flex;
+    align-items: center;
+}
+
+.bmButton img {
+    height: 24px;
+    margin: 16px;
+}
+
+.bmButton:hover {
+    background-color: rgb(251, 188, 5);
+    border-radius: 16px;
+}
+
+.noteButton {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 8px;
+}
+
+.noteButton button {
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    border-radius: 8px;
+    background-color: white;
+    padding: 8px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
+}
+
+.noteButton button:hover {
+    background-color: rgb(251, 188, 5);
+    transition: 130ms;
+}
+
+.contentBasketBtn {
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: white;
+    padding: 8px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
+}
+
+.contentBasketBtn:hover {
+    background-color: rgb(251, 188, 5);
+    transition: 130ms;
+}
+
+/* alert button*/
+
+.contentDeleteAlert button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    margin: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
+}
+
+.contentDeleteAlert button:hover {
+    background-color: rgb(251, 188, 5);
+    transition: 130ms;
+}

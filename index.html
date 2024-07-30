@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notizblock</title>
+    <link rel="icon" type="favicon" href="./assets/img/favicon.png">
+    <script src="./scripts/templates.js"></script>
+    <script src="./scripts/helpfunction.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style/fonts.css"> 
+    <link rel="stylesheet" href="./style/standard.css"> 
+    <link rel="stylesheet" href="./style/assets.css">
+    <link rel="stylesheet" href="./style/notes.css">
+    <link rel="stylesheet" href="./style/responsive.css">
+</head>
+
+<body onload="init()">
+    <div id="alert"></div>
+    <div id="edit"></div>
+    <main>
+        <nav class="contentNavbar">
+            <div onclick="toggleBurgerMenu()" class="menuIcon">
+                <img src="./assets/img/icons8-menü-48.png" alt="Menü">
+            </div>
+            <div id="navButtons">
+                <div onclick="closeNavbar()" class="navButton">
+                    <img src="./assets/img/icons8-notiz-48.png" alt="Notiz">
+                    <span>Notizen</span>
+                </div>
+                <div class="navButton">
+                    <img src="./assets/img/icons8-archiv-48.png" alt="Archiv">
+                    <span>Archiv</span>
+                </div>
+                <div onclick="basketNotes()" class="navButton">
+                    <img src="./assets/img/icons8-mülleimer-48.png" alt="Papierkorb">
+                    <span>Papierkorb</span>
+                </div>
+            </div>
+            <div id="line" class="verticalLine"></div>
+        </nav>
+        <section>
+            <article id="contentNote">
+                <div id="contentAddNote" class="contentAddNote">
+                    <h1>Notizblock</h1>
+                    <div class="mainNote">
+                        <input id="newTitel" class="inputTitel" type="text" placeholder="Titel">
+                        <textarea class="textArea" onclick="openNote()" name="Text" id="newText"
+                            placeholder="Notiz schreiben..."></textarea>
+                        <div id="contentBars" class="contentAddBars">
+                            <div class="addTooltip">
+                                <div class="tooltip">
+                                    <img src="./assets/img/icons8-bild-hinzufügen-48.png" alt=""><span class="tooltiptext">Bild
+                                        hinzufügen</span>
+                                </div>
+                                <div class="tooltip">
+                                    <img src="./assets/img/icons8-archiv-hinzufügen-48.png" alt=""><span
+                                        class="tooltiptext">Archivieren</span>
+                                </div>
+                            </div>
+                            <div class="addBars">
+                                <button onclick="addNote()">Speichern</button>
+                                <button onclick="closeNote()">Schließen</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="navButtons" class="bmContentNavbar d-none">
+                    <div onclick="closeNavbar()" class="bmButton">
+                        <img src="./assets/img/icons8-notiz-48.png" alt="Notiz">
+                    </div>
+                    <div class="bmButton">
+                        <img src="./assets/img/icons8-archiv-48.png" alt="Archiv">
+                    </div>
+                    <div onclick="basketNotes()" class="bmButton">
+                        <img src="./assets/img/icons8-mülleimer-48.png" alt="Papierkorb">
+                    </div>
+                </div>
+            </article>
+            <article>
+                <div id="newNote" class="notepad"></div>
+                <div id="deleteBasket" class="basket d-none">
+                    <div class="contentBasket">
+                        <button onclick="closeNavbar()" class="contentBasketBtn">Schließen</button>
+                        <div id="deleteNote" class="notepadBasket"></div>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>

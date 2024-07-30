@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 20px 0 180px;
+}
+
+img {
+    height: 24px;
+    margin: 0 16px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 821px) {
+    .mainNote {
+        width: 300px;
+    }
+
+    .notepad {
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+}
+
